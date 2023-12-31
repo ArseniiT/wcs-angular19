@@ -19,7 +19,9 @@ export class HttpService implements OnInit{
 
   getUsersById(id: number): Observable<User>{
     return this.http.get<User[]>('/assets/json/users.json').pipe(
-      map(users => users[id])
+      map(users => {
+        console.log(id)
+        return users[id]})
     );
   }
 }

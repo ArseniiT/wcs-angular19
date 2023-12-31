@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SmartComponent } from './smart/smart.component';
+import { AccSmartComponent } from './acc-smart/acc-smart.component';
 
 const routes: Routes = [
-  {path: 'home', component: SmartComponent}
+  {path: 'home/:id', component: AccSmartComponent}
 ];
 
 @NgModule({

@@ -1,3 +1,7 @@
 <a [routerLink]="['admin/home']">Admin home</a>
-<a [routerLink]="['account/home']">Account home</a>
+<ul>
+    <li *ngFor="let u of users; let id = index">
+        <a [routerLink]="['account/home', id]">Account №{{id}} home</a>
+    </li>
+</ul>
 <router-outlet></router-outlet>
