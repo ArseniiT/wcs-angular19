@@ -20,12 +20,13 @@ export class AccSmartComponent {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      this.id = params['id'];
+      this.id = +params['id'];
       this.getUser();
     });
   }
 
   getUser() {
+    console.log(this.id)
     if (this.id) {
       this.service.getUsersById(this.id).subscribe(u => {
         this.user = u
